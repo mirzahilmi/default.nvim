@@ -3,35 +3,42 @@
     enable = true;
 
     # Document existing key chains
-    registrations = {
-      "<leader>c" = {
-        name = "[C]ode";
-        _ = "which_key_ignore";
-      };
-      "<leader>d" = {
-        name = "[D]ocument";
-        _ = "which_key_ignore";
-      };
-      "<leader>r" = {
-        name = "[R]ename";
-        _ = "which_key_ignore";
-      };
-      "<leader>s" = {
-        name = "[S]earch";
-        _ = "which_key_ignore";
-      };
-      "<leader>w" = {
-        name = "[W]orkspace";
-        _ = "which_key_ignore";
-      };
-      "<leader>t" = {
-        name = "[T]oggle";
-        _ = "which_key_ignore";
-      };
-      "<leader>h" = {
-        name = "Git [H]unk";
-        _ = "which_key_ignore";
-      };
-    };
+    settings.spec = [
+      {
+        __unkeyed = "<leader>c";
+        group = "[C]ode";
+        desc = "which_key_ignore";
+      }
+      {
+        __unkeyed = "<leader>d";
+        group = "[D]ocument";
+        desc = "which_key_ignore";
+      }
+      {
+        __unkeyed = "<leader>r";
+        group = "[R]ename";
+        desc = "which_key_ignore";
+      }
+      {
+        __unkeyed = "<leader>s";
+        group = "[S]earch";
+        desc = "which_key_ignore";
+      }
+      {
+        __unkeyed = "<leader>w";
+        group = "[W]orkspace";
+        desc = "which_key_ignore";
+      }
+      {
+        __unkeyed = "<leader>t";
+        group = "[T]oggle";
+        desc = "which_key_ignore";
+      }
+      {
+        __unkeyed = "<leader>h";
+        group = "Git [H]unk";
+        desc = "which_key_ignore";
+      }
+    ];
   };
 }
