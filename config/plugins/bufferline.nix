@@ -1,11 +1,15 @@
 {
   plugins.bufferline = {
     enable = true;
-    # settings = {
-    #   options = {
-    #     always_show_bufferline = true;
-    #     diagnostics = "nvim_lsp";
-    #   };
-    # };
+    settings = {
+      options = {
+        diagnostics = "nvim_lsp";
+        hover = {
+          enabled = true;
+          delay = 200;
+          reveal = ["close"];
+        };
+      };
+    };
   };
 }
