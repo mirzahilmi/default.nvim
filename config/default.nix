@@ -29,7 +29,6 @@
 
     # Set to true if you have a Nerd Font installed and selected in the terminal
     have_nerd_font = true;
-    mousemoveevent = true;
   };
 
   # [[ Setting options ]]
@@ -97,8 +96,8 @@
     tabstop = 4; # number of space inserted with <tab>
     shiftwidth = 4; # number of space inserted with > or <
     smartindent = true;
-
     termguicolors = true;
+    mousemoveevent = true;
   };
 
   # [[ Basic Keymaps ]]
