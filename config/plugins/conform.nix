@@ -27,12 +27,24 @@
     formattersByFt = {
       lua = ["stylua"];
       nix = ["alejandra"];
+      php = ["php-cs-fixer"];
       # Conform can also run multiple formatters sequentially
       # python = [ "isort "black" ];
       #
       # You can use a sublist to tell conform to run *until* a formatter
       # is found
       # javascript = [ [ "prettierd" "prettier" ] ];
+    };
+    formatters = {
+      php-cs-fixer = {
+        command = "${pkgs.php84Packages.php-cs-fixer}";
+        args = [
+          "fix"
+          "--rules=@PSR12"
+          "$FILENAME"
+        ];
+        stdin = false;
+      };
     };
   };
 
