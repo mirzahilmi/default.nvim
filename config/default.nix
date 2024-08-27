@@ -2,7 +2,7 @@
   imports = [
     ./plugins/autopairs.nix
     ./plugins/bg-nvim.nix
-    ./plugins/bufferline.nix
+    # ./plugins/bufferline.nix
     ./plugins/conform.nix
     ./plugins/cord.nix
     ./plugins/dadbod.nix
