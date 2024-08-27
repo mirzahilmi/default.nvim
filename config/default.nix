@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./plugins/autopairs.nix
-    ./plugins/bg-nvim.nix
+    ./plugins/bg.nix
     ./plugins/bufferline.nix
     ./plugins/conform.nix
     ./plugins/cord.nix
@@ -13,6 +13,7 @@
     ./plugins/lsp.nix
     ./plugins/mini.nix
     ./plugins/nvim-cmp.nix
+    ./plugins/obsidian.nix
     ./plugins/oil.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
@@ -98,6 +99,7 @@
     smartindent = true;
     termguicolors = true;
     mousemoveevent = true;
+    conceallevel = 2;
   };
 
   # [[ Basic Keymaps ]]
