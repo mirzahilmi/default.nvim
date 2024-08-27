@@ -27,7 +27,7 @@
   extraConfigLua = ''
     local lspconfig = require("lspconfig")
     lspconfig.gopls.setup { cmd = { "${pkgs.gopls}/bin/gopls" } }
-    lspconfig.phpactor.setup { cmd = { "${pkgs.phpactor}/bin/phpactor", "language-server" } }
+    lspconfig.intelephense.setup { cmd = { "${pkgs.nodePackages.intelephense}/bin/intelephense", "--stdio" } }
     lspconfig.nixd.setup { cmd = { "${pkgs.nixd}/bin/nixd" } }
     lspconfig.arduino_language_server.setup { cmd = { "${pkgs.arduino-language-server}/bin/arduino-language-server" } }
   '';

@@ -36,6 +36,7 @@
         _module.args.pkgs = import inputs.nixpkgs {
           inherit system;
           overlays = builtins.attrValues (import ./overlays);
+          config.allowUnfree = true;
         };
 
         checks = {
