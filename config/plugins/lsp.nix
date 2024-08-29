@@ -26,10 +26,10 @@
 
   extraConfigLua = ''
     local lspconfig = require("lspconfig")
-    lspconfig.gopls.setup { cmd = { "${pkgs.gopls}/bin/gopls" } }
-    lspconfig.intelephense.setup { cmd = { "${pkgs.nodePackages.intelephense}/bin/intelephense", "--stdio" } }
-    lspconfig.nixd.setup { cmd = { "${pkgs.nixd}/bin/nixd" } }
-    lspconfig.arduino_language_server.setup { cmd = { "${pkgs.arduino-language-server}/bin/arduino-language-server" } }
+    lspconfig.gopls.setup {}
+    lspconfig.intelephense.setup {}
+    lspconfig.nixd.setup {}
+    lspconfig.arduino_language_server.setup {}
   '';
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraconfigluapre
