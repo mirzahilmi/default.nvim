@@ -37,9 +37,9 @@
     };
     formatters = {
       php-cs-fixer = {
+        command = "./vendor/bin/php-cs-fixer";
         args = [
           "fix"
-          "--rules=@PSR12"
           "$FILENAME"
         ];
         stdin = false;
