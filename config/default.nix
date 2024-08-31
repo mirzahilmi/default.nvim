@@ -99,7 +99,7 @@
     smartindent = true;
     termguicolors = true;
     mousemoveevent = true;
-    conceallevel = 2;
+    conceallevel = 1;
   };
 
   # [[ Basic Keymaps ]]

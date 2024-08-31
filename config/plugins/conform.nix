@@ -37,7 +37,6 @@
     };
     formatters = {
       php-cs-fixer = {
-        command = "${pkgs.php84Packages.php-cs-fixer}";
         args = [
           "fix"
           "--rules=@PSR12"
