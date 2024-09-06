@@ -181,6 +181,14 @@
         desc = "Move focus to the upper window";
       };
     }
+    # {
+    #   mode = "n";
+    #   key = "<C-/>";
+    #   action = "<C-w><C-k>";
+    #   options = {
+    #     desc = "Move focus to the upper window";
+    #   };
+    # }
   ];
 
   # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html

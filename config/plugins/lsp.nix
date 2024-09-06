@@ -30,7 +30,6 @@
     lspconfig.intelephense.setup {}
     lspconfig.nixd.setup {}
     lspconfig.arduino_language_server.setup {}
-    lspconfig.biome.setup { single_file_support = true }
   '';
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraconfigluapre
