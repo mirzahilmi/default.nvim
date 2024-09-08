@@ -17,6 +17,8 @@
         "<C-k>" = false;
         "<C-l>" = false;
         "<Esc>" = "actions.close";
+        "<C-v>".__raw = ''{ "actions.select", opts = { vertical = true }, desc = "Open the entry in a vertical split" }'';
+        "<C-x>".__raw = ''{ "actions.select", opts = { horizontal = true }, desc = "Open the entry in a horizontal split" }'';
       };
     };
   };

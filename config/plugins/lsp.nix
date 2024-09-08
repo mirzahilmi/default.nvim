@@ -27,6 +27,7 @@
   extraConfigLua = ''
     local lspconfig = require("lspconfig")
     lspconfig.gopls.setup {}
+    lspconfig.phpactor.setup {}
     lspconfig.intelephense.setup {}
     lspconfig.nixd.setup {}
     lspconfig.arduino_language_server.setup {}
