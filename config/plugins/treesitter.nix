@@ -1,17 +1,17 @@
-{
+{pkgs, ...}: {
   # Highlight, edit, and navigate code
   # https://nix-community.github.io/nixvim/plugins/treesitter/index.html
   plugins.treesitter = {
     enable = true;
-
+    grammarPackages = with pkgs.vimPlugins;
+      nvim-treesitter.passthru.allGrammars
+      ++ [
+        nvim-treesitter-parsers.hurl
+      ];
     settings = {
-      ensure_installed = ["hurl"];
       indent.enable = true;
+      highlight.enable = true;
     };
-
-    # TODO: Figure out how to do this
-    #highlight = {
-    #  enable = true;
 
     # Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
     #  If you are experiencing weird indenting issues, add the language to
