@@ -97,7 +97,6 @@
     wrap = false; # disable text wrapping
     tabstop = 4; # number of space inserted with <tab>
     shiftwidth = 4; # number of space inserted with > or <
-    smartindent = true;
     termguicolors = true;
     mousemoveevent = true;
     conceallevel = 1;
