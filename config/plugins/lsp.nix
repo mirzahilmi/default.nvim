@@ -31,7 +31,15 @@
     -- lspconfig.intelephense.setup {}
     lspconfig.nixd.setup {}
     lspconfig.arduino_language_server.setup {}
-    lspconfig.rust_analyzer.setup {}
+    lspconfig.rust_analyzer.setup {
+      settings = {
+        ["rust-analyzer"] = {
+          cargo = {
+            allFeatures = true,
+          }
+        }
+      }
+    }
   '';
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraconfigluapre
