@@ -28,7 +28,7 @@
     local lspconfig = require("lspconfig")
     lspconfig.gopls.setup {}
     lspconfig.phpactor.setup {}
-    -- lspconfig.intelephense.setup {}
+    lspconfig.terraformls.setup {}
     lspconfig.nixd.setup {}
     lspconfig.arduino_language_server.setup {}
     lspconfig.rust_analyzer.setup {
