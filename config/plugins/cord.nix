@@ -6,7 +6,7 @@
       display = { show_cursor_position = true },
       lsp = { show_problem_count = false },
       assets = {
-        [".tf"] = {
+        ["terraform"] = {
           icon = "https://i.postimg.cc/8C4x6HxS/terraform.png",
           tooltip = "Terraform",
           type = 0,
