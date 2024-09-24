@@ -6,6 +6,7 @@
     ./plugins/conform.nix
     ./plugins/cord.nix
     ./plugins/dadbod.nix
+    ./plugins/dbee.nix
     ./plugins/git-conflict.nix
     ./plugins/gitsigns.nix
     ./plugins/gruvbox.nix
