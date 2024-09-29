@@ -2,6 +2,7 @@
   imports = [
     ./plugins/autopairs.nix
     ./plugins/bg.nix
+    ./plugins/cellular-automation.nix
     ./plugins/conform.nix
     ./plugins/cord.nix
     ./plugins/dadbod.nix
@@ -99,7 +100,6 @@
     shiftwidth = 4; # number of space inserted with > or <
     termguicolors = true;
     mousemoveevent = true;
-    conceallevel = 1;
   };
 
   # [[ Basic Keymaps ]]
