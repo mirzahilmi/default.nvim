@@ -6,5 +6,5 @@
   extraConfigLua = ''
     require"dbee".setup {}
   '';
-  plugins.cmp.filetype.sql.sources = [{name = "cmp-dbee";}];
+  plugins.cmp.settings.sources = [{name = "cmp-dbee";}];
 }
