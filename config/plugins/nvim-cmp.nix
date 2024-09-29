@@ -110,14 +110,5 @@
         }
       ];
     };
-    filetype = {
-      sql = {
-        sources = [
-          {name = "cmp-dbee";}
-          {name = "vim-dadbod-completion";}
-          {name = "buffer";}
-        ];
-      };
-    };
   };
 }
