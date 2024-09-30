@@ -29,7 +29,7 @@
     lspconfig.gopls.setup {}
     lspconfig.phpactor.setup {}
     lspconfig.terraformls.setup {
-      filetypes = { "terraform", "terraform-vars", "*.tf", "*.tfvars" }
+      filetypes = { "terraform", "terraform-vars", "tf", "tfvars" }
     }
     lspconfig.nixd.setup {}
     lspconfig.arduino_language_server.setup {}
