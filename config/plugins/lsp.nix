@@ -28,11 +28,16 @@
     local lspconfig = require("lspconfig")
     lspconfig.gopls.setup {}
     lspconfig.phpactor.setup {}
+    lspconfig.nixd.setup {}
+    lspconfig.arduino_language_server.setup {}
+    lspconfig.yamlls.setup {}
+    lspconfig.biome.setup {
+      filetypes = { "json", "jsonc" },
+      single_file_support = true
+    }
     lspconfig.terraformls.setup {
       filetypes = { "terraform", "terraform-vars", "tf", "tfvars" }
     }
-    lspconfig.nixd.setup {}
-    lspconfig.arduino_language_server.setup {}
     lspconfig.rust_analyzer.setup {
       settings = {
         ["rust-analyzer"] = {
