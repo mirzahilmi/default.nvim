@@ -45,6 +45,7 @@
           sort_mru = true;
           sort_lastused = true;
         };
+        find_files.hidden = true;
       };
       extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
     };
