@@ -19,6 +19,7 @@
     ./plugins/oil.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
+    ./plugins/vim-dbml.nix
     ./plugins/which-key.nix
   ];
 
