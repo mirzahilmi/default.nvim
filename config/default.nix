@@ -17,6 +17,7 @@
     ./plugins/nvim-cmp.nix
     ./plugins/obsidian.nix
     ./plugins/oil.nix
+    ./plugins/roslyn.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/vim-dbml.nix
