@@ -28,6 +28,7 @@
       lua = ["stylua"];
       nix = ["alejandra"];
       php = ["php-cs-fixer"];
+      cs = ["csharpier"];
       # Conform can also run multiple formatters sequentially
       # python = [ "isort "black" ];
       #
