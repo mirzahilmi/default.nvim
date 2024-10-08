@@ -36,6 +36,10 @@
         args = ["fix" "$FILENAME"];
         stdin = false;
       };
+      csharpier = {
+        command = "dotnet-csharpier";
+        args = ["--write-stdout"];
+      };
     };
   };
 
