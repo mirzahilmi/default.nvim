@@ -39,11 +39,12 @@
     formatters = {
       php-cs-fixer = {
         command = "./vendor/bin/php-cs-fixer";
-        args = [
-          "fix"
-          "$FILENAME"
-        ];
+        args = ["fix" "$FILENAME"];
         stdin = false;
+      };
+      csharpier = {
+        command = "dotnet-csharpier";
+        args = ["--write-stdout" "--no-cache" "$FILENAME"];
       };
     };
   };
