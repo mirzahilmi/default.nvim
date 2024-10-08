@@ -28,17 +28,13 @@
       lua = ["stylua"];
       nix = ["alejandra"];
       php = ["php-cs-fixer"];
-      # cs = ["csharpier"];
+      cs = ["csharpier"];
     };
     formatters = {
       php-cs-fixer = {
         command = "./vendor/bin/php-cs-fixer";
         args = ["fix" "$FILENAME"];
         stdin = false;
-      };
-      csharpier = {
-        command = "dotnet-csharpier";
-        args = ["--write-stdout"];
       };
     };
   };
