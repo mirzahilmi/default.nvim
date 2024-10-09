@@ -20,6 +20,7 @@
           sort_lastused = true;
         };
       };
+      extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
     };
 
     # You can put your default mappings / updates / etc. in here
