@@ -21,6 +21,7 @@
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/vim-dbml.nix
+    ./plugins/web-devicons.nix
     ./plugins/which-key.nix
   ];
 
@@ -242,18 +243,9 @@
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
   extraPlugins = with pkgs.vimPlugins; [
-    nvim-web-devicons # TODO: Figure out how to configure using this with telescope
     vim-abolish
     vim-be-good
   ];
-
-  # TODO: Figure out where to move this
-  # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapre
-  extraConfigLuaPre = ''
-    if vim.g.have_nerd_font then
-      require('nvim-web-devicons').setup {}
-    end
-  '';
 
   # The line beneath this is called `modeline`. See `:help modeline`
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapost
