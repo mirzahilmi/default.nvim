@@ -34,17 +34,20 @@
         # Lua
         ''
           function(bufnr)
-            local slow_format_filetypes = {cs}
-            if slow_format_filetypes[vim.bo[bufnr].filetype] then
+            local slow_format_filetypes = { cs = true }
+            local filetype = vim.bo[bufnr].filetype
+            if slow_format_filetypes[filetype] then
               return
             end
+
             local disable_filetypes = { c = true, cpp = true }
             local lsp_format_opt
-            if disable_filetypes[vim.bo[bufnr].filetype] then
+            if disable_filetypes[filetype] then
               lsp_format_opt = 'never'
             else
               lsp_format_opt = 'fallback'
             end
+
             return {
               timeout_ms = 500,
               lsp_format = lsp_format_opt,
