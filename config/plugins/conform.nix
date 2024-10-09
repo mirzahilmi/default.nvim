@@ -34,7 +34,7 @@
         # Lua
         ''
           function(bufnr)
-            local slow_format_filetypes = {'cs'}
+            local slow_format_filetypes = {cs}
             if slow_format_filetypes[vim.bo[bufnr].filetype] then
               return
             end
