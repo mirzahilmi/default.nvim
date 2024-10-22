@@ -26,6 +26,8 @@
   ];
 
   package = pkgs.neovim-unwrapped;
+  viAlias = true;
+  vimAlias = true;
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#globals
   globals = {
     # Set <space> as the leader key
