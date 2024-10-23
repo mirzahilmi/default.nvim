@@ -15,7 +15,7 @@
     ./plugins/lsp.nix
     ./plugins/mini.nix
     ./plugins/nvim-cmp.nix
-    ./plugins/obsidian.nix
+    # ./plugins/obsidian.nix
     ./plugins/oil.nix
     ./plugins/roslyn.nix
     ./plugins/telescope.nix
