@@ -7,7 +7,6 @@
     # NOTE: Enabling these will cause errors unless these tools are installed
     lintersByFt = {
       nix = ["nix"];
-      sql = ["sqlfluff"];
     };
 
     # Create autocommand which carries out the actual linting
