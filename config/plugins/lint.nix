@@ -7,15 +7,7 @@
     # NOTE: Enabling these will cause errors unless these tools are installed
     lintersByFt = {
       nix = ["nix"];
-      #clojure = ["clj-kondo"];
-      #dockerfile = ["hadolint"];
-      #inko = ["inko"];
-      #janet = ["janet"];
-      #json = ["jsonlint"];
-      #rst = ["vale"];
-      #ruby = ["ruby"];
-      #terraform = ["tflint"];
-      #text = ["vale"];
+      sql = ["sqlfluff"];
     };
 
     # Create autocommand which carries out the actual linting
