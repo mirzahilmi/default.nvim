@@ -29,7 +29,7 @@
         nix = ["alejandra"];
         php = ["php-cs-fixer"];
         cs = ["csharpier"];
-        sql = ["sql-formatter"];
+        sql = ["sql_formatter"];
       };
       format_on_save =
         # Lua
