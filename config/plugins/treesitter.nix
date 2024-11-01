@@ -10,7 +10,10 @@
       ];
     settings = {
       indent.enable = true;
-      highlight.enable = true;
+      highlight = {
+        enable = true;
+        disable = ["dockerfile"];
+      };
     };
 
     # Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
