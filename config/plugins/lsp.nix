@@ -12,6 +12,7 @@
     lspconfig.nixd.setup {}
     lspconfig.arduino_language_server.setup {}
     lspconfig.yamlls.setup {}
+    lspconfig.denols.setup {}
     lspconfig.biome.setup {
       filetypes = { "json", "jsonc" },
       single_file_support = true
