@@ -12,9 +12,6 @@
     lspconfig.nixd.setup {}
     lspconfig.arduino_language_server.setup {}
     lspconfig.yamlls.setup {}
-    lspconfig.denols.setup {
-      root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-    }
     lspconfig.biome.setup {
       filetypes = { "json", "jsonc" },
       single_file_support = true
