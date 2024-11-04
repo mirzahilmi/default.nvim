@@ -20,7 +20,6 @@
     ./plugins/roslyn.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
-    ./plugins/typescript-tools.nix
     ./plugins/vim-dbml.nix
     ./plugins/web-devicons.nix
     ./plugins/which-key.nix
