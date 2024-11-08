@@ -33,14 +33,6 @@
     }
   '';
 
-  extraConfigLuaPre = ''
-    vim.diagnostic.config({update_in_insert = true})
-    vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-      vim.lsp.handlers.hover,
-      {border = 'rounded'}
-    )
-  '';
-
   autoGroups = {
     "kickstart-lsp-attach" = {
       clear = true;
@@ -153,12 +145,10 @@
         };
         # Opens a popup that displays documentation about the word under your cursor
         #  See `:help K` for why this keymap.
-        "K" = {
-          action = "hover";
-          desc = "LSP: Hover Documentation";
-        };
-        # WARN: This is not Goto Definition, this is Goto Declaration.
-        #  For example, in C this would take you to the header.
+        # "K" = {
+        #   action = "hover";
+        #   desc = "LSP: Hover Documentation";
+        # };
         "gD" = {
           action = "declaration";
           desc = "LSP: [G]oto [D]eclaration";
@@ -166,27 +156,14 @@
       };
     };
 
-    # LSP servers and clients are able to communicate to each other what features they support.
-    #  By default, Neovim doesn't support everything that is in the LSP specification.
-    #  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
-    #  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
-    # NOTE: This is done automatically by Nixvim when enabling cmp-nvim-lsp below is an example if you did want to add new capabilities
-    #capabilities = ''
-    #  capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
-    #'';
-
     # This function gets run when an LSP attaches to a particular buffer.
     #   That is to say, every time a new file is opened that is associated with
     #   an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
     #   function will be executred to configure the current buffer
-    # NOTE: This is an example of an attribute that takes raw lua
     onAttach =
       #lua
       ''
-        -- NOTE: Remember that Lua is a real programming language, and as such it is possible
-        -- to define small helper and utility functions so you don't have to repeat yourself.
-        --
-        -- In this case, we create a function that lets us more easily define mappings specific
+        -- Function that lets us more easily define mappings specific
         -- for LSP related items. It sets the mode, buffer and description for us each time.
         local map = function(keys, func, desc)
           vim.keymap.set('n', keys, func, { buffer = bufnr, desc = 'LSP: ' .. desc })
