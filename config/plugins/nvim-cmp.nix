@@ -8,6 +8,12 @@
   plugins.cmp = {
     enable = true;
     settings = {
+      completion.completeopt = "menu,menuone,noinsert";
+      window.__raw = ''
+        {
+          completion = cmp.config.window.bordered(),
+        },
+      '';
       snippet = {
         expand = ''
           function(args)
@@ -15,7 +21,6 @@
           end
         '';
       };
-      completion.completeopt = "menu,menuone,noinsert";
       mapping = {
         # Select the [n]ext item
         "<C-n>" = "cmp.mapping.select_next_item()";
@@ -58,7 +63,7 @@
       sources = [
         {name = "nvim_lsp";}
         {name = "luasnip";}
-        {name = "buffer";}
+        {name = "path";}
       ];
     };
   };
