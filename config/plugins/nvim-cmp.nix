@@ -9,17 +9,28 @@
     enable = true;
     settings = {
       completion.completeopt = "menu,menuone,noinsert";
-      window.__raw = ''
-        {
-          completion = cmp.config.window.bordered(),
-        },
-      '';
+      window = {
+        completion = {
+          border = "rounded";
+          scrollbar = false;
+          winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None";
+          zindex = 1001;
+        };
+        documentation = {
+          winhighlight = "Normal:BgDark";
+          zindex = 1001;
+        };
+      };
       snippet = {
         expand = ''
           function(args)
             require('luasnip').lsp_expand(args.body)
           end
         '';
+      };
+      performance = {
+        debounce = 0;
+        throttle = 0;
       };
       mapping = {
         # Select the [n]ext item
