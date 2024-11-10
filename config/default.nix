@@ -12,7 +12,6 @@
     ./plugins/health.nix
     ./plugins/lint.nix
     ./plugins/lsp.nix
-    ./plugins/lspsaga.nix
     ./plugins/mini.nix
     ./plugins/nvim-cmp.nix
     ./plugins/oil.nix

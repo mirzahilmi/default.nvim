@@ -145,10 +145,10 @@
         };
         # Opens a popup that displays documentation about the word under your cursor
         #  See `:help K` for why this keymap.
-        # "K" = {
-        #   action = "hover";
-        #   desc = "LSP: Hover Documentation";
-        # };
+        "K" = {
+          action = "hover";
+          desc = "LSP: Hover Documentation";
+        };
         "gD" = {
           action = "declaration";
           desc = "LSP: [G]oto [D]eclaration";
