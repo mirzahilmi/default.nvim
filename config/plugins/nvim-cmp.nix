@@ -1,30 +1,13 @@
 {
-  plugins.luasnip = {
-    enable = true;
+  plugins = {
+    luasnip.enable = true;
+    cmp-nvim-lsp.enable = true;
+    cmp-path.enable = true;
   };
-  plugins.cmp-nvim-lsp = {
-    enable = true;
-  };
-  plugins.cmp-path = {
-    enable = true;
-  };
-  plugins.friendly-snippets = {
-    enable = true;
-  };
-  extraLuaPackages = ps: [
-    # Required by luasnip
-    ps.jsregexp
-  ];
+  extraLuaPackages = ps: [ps.jsregexp];
   plugins.cmp = {
     enable = true;
     settings = {
-      window = {
-        __raw = ''
-          {
-            documentation = cmp.config.window.bordered(),
-          }
-        '';
-      };
       snippet = {
         expand = ''
           function(args)
@@ -32,15 +15,7 @@
           end
         '';
       };
-
-      completion = {
-        completeopt = "menu,menuone,noinsert";
-      };
-
-      # For an understanding of why these mappings were
-      # chosen, you will need to read `:help ins-completion`
-      #
-      # No, but seriously, Please read `:help ins-completion`, it is really good!
+      completion.completeopt = "menu,menuone,noinsert";
       mapping = {
         # Select the [n]ext item
         "<C-n>" = "cmp.mapping.select_next_item()";
@@ -53,17 +28,10 @@
         #  This will auto-import if your LSP supports it.
         #  This will expand snippets if the LSP sent a snippet.
         "<C-y>" = "cmp.mapping.confirm { select = true }";
-        # If you prefer more traditional completion keymaps,
-        # you can uncomment the following lines.
-        # "<CR>" = "cmp.mapping.confirm { select = true }";
-        # "<Tab>" = "cmp.mapping.select_next_item()";
-        # "<S-Tab>" = "cmp.mapping.select_prev_item()";
-
         # Manually trigger a completion from nvim-cmp.
         #  Generally you don't need this, because nvim-cmp will display
         #  completions whenever it has completion options available.
         "<C-Space>" = "cmp.mapping.complete {}";
-
         # Think of <c-l> as moving to the right of your snippet expansion.
         #  So if you have a snippet that's like:
         #  function $name($args)
@@ -86,28 +54,11 @@
             end
           end, { 'i', 's' })
         '';
-
-        # For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
-        #    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
       };
-
-      # WARNING: If plugins.cmp.autoEnableSources Nixivm will automatically enable the
-      # corresponding source plugins. This will work only when this option is set to a list.
-      # If you use a raw lua string, you will need to explicitly enable the relevant source
-      # plugins in your nixvim configuration.
       sources = [
-        {
-          name = "luasnip";
-        }
-        # Adds other completion capabilites.
-        #  nvim-cmp does not ship with all sources by default. They are split
-        #  into multiple repos for maintenance purposes.
-        {
-          name = "nvim_lsp";
-        }
-        {
-          name = "path";
-        }
+        {name = "nvim_lsp";}
+        {name = "luasnip";}
+        {name = "buffer";}
       ];
     };
   };
