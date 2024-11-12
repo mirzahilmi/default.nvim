@@ -17,7 +17,7 @@
           zindex = 1001;
         };
         documentation = {
-          winhighlight = "Normal:BgDark";
+          winhighlight = "Normal:DarkFloat,FloatBorder:DarkFloat";
           zindex = 1001;
         };
       };

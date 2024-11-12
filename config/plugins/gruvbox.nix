@@ -5,7 +5,7 @@
     gruvbox_material_diagnostic_virtual_text = 1;
   };
   highlightOverride = {
-    BgDark = {bg = "#1d2021";};
+    DarkFloat = {bg = "#232323";};
     TelescopeSelection = {link = "CursorLine";};
     TelescopeMatching = {link = "OrangeBold";};
     NormalFloat = {link = "@none";};
