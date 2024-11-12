@@ -2,6 +2,7 @@
   imports = [
     ./plugins/autopairs.nix
     ./plugins/bg.nix
+    ./plugins/codesnap.nix
     ./plugins/conform.nix
     ./plugins/cord.nix
     ./plugins/dadbod.nix
