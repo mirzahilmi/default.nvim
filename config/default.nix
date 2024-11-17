@@ -76,10 +76,13 @@
     smartindent = true;
     # num of space characters per tab
     tabstop = 4;
+    softtabstop = 4;
     # spaces per indentation level
     shiftwidth = 4;
     termguicolors = true;
     mousemoveevent = true;
+    # line length marker
+    colorcolumn = "80";
   };
 
   keymaps = [
