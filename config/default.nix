@@ -20,6 +20,7 @@
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/vim-dbml.nix
+    ./plugins/vim-startuptime.nix
     ./plugins/web-devicons.nix
     ./plugins/which-key.nix
   ];
