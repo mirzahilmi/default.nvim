@@ -12,6 +12,7 @@
     lspconfig.nixd.setup {}
     lspconfig.arduino_language_server.setup {}
     lspconfig.yamlls.setup {}
+    lspconfig.basedpyright.setup {}
     lspconfig.denols.setup {
       root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
     }
