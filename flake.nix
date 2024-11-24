@@ -29,7 +29,7 @@
         _nixvim = nixvim.legacyPackages.${system};
         nixvimModule = {
           inherit pkgs;
-          module = import ./config; # import the module directly
+          module = import ./default.nix;
         };
         nvim = _nixvim.makeNixvimWithModule nixvimModule;
       in {

@@ -80,7 +80,7 @@
   plugins.lsp = {
     enable = true;
     servers = {
-      bashls.enable = true;
+      # bashls.enable = true;
     };
     postConfig = ''
       local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview

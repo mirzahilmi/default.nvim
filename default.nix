@@ -25,7 +25,6 @@
     ./plugins/which-key.nix
   ];
 
-  package = pkgs.neovim-unwrapped;
   viAlias = true;
   vimAlias = true;
   globals = {
