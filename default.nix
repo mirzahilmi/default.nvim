@@ -16,6 +16,7 @@
     ./plugins/mini.nix
     ./plugins/nvim-cmp.nix
     ./plugins/oil.nix
+    ./plugins/persistence.nix
     ./plugins/roslyn.nix
     ./plugins/telescope.nix
     ./plugins/treesitter.nix
