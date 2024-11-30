@@ -7,7 +7,8 @@
       mode = "n";
       key = "<leader>qs";
       action.__raw = ''
-        function() require("persistence").load()
+        function()
+          require("persistence").load()
         end
       '';
       options = {
