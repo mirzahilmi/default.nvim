@@ -7,6 +7,7 @@
     ./plugins/cord.nix
     ./plugins/dadbod.nix
     ./plugins/dbee.nix
+    ./plugins/fzf.nix
     ./plugins/git-conflict.nix
     ./plugins/gitsigns.nix
     ./plugins/gruvbox.nix
@@ -18,7 +19,6 @@
     ./plugins/oil.nix
     ./plugins/persistence.nix
     ./plugins/roslyn.nix
-    ./plugins/telescope.nix
     ./plugins/treesitter.nix
     ./plugins/vim-dbml.nix
     ./plugins/vim-startuptime.nix
@@ -64,7 +64,7 @@
     # Preview subsitutions live, as you type!
     inccommand = "split";
     cursorline = true;
-    cursorlineopt = "number";
+    # cursorlineopt = "number";
     # Minimal number of screen lines to keep above and below the cursor
     scrolloff = 10;
     # Set highlight on search, but clear on pressing <Esc> in normal mode
