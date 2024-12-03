@@ -5,6 +5,13 @@
       winopts = {
         backdrop = 100;
       };
+      previewers.builtin.extensions = {
+        "png" = ["chafa" "{file}"];
+        "jpg" = ["chafa" "{file}"];
+        "jpeg" = ["chafa" "{file}"];
+        "gif" = ["chafa" "{file}"];
+        "webp" = ["chafa" "{file}"];
+      };
     };
     keymaps = {
       "<leader>sf" = {
