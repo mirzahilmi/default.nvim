@@ -38,7 +38,14 @@
       "<leader>sh" = {
         action = "helptags";
         options = {
-          desc = "[S]earch for [H]elp";
+          desc = "[S]earch [H]elp";
+          silent = true;
+        };
+      };
+      "<leader>sk" = {
+        action = "keymaps";
+        options = {
+          desc = "[S]earch [K]eymap";
           silent = true;
         };
       };
