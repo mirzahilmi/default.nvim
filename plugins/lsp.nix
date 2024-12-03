@@ -79,6 +79,9 @@
 
   plugins.lsp = {
     enable = true;
+    servers = {
+      # bashls.enable = true;
+    };
     postConfig = ''
       local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
       function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
@@ -194,6 +197,15 @@
               vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
             end,
           })
+        end
+        -- The following autocommand is used to enable inlay hints in your
+        -- code, if the language server you are using supports them
+        --
+        -- This may be unwanted, since they displace some of your code
+        if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
+          vim.keymap.set('n', '<leader>th', function()
+            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+          end, { buffer = bufnr, desc = '[T]oggle Inlay [H]ints' })
         end
 
         -- workaround for gopls not supporting semanticTokensProvider
