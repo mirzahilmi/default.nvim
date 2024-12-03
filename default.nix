@@ -14,6 +14,7 @@
     ./plugins/health.nix
     ./plugins/lint.nix
     ./plugins/lsp.nix
+    ./plugins/lualine.nix
     ./plugins/mini.nix
     ./plugins/nvim-cmp.nix
     ./plugins/oil.nix
@@ -26,8 +27,6 @@
     ./plugins/which-key.nix
   ];
 
-  viAlias = true;
-  vimAlias = true;
   globals = {
     mapleader = " ";
     maplocalleader = " ";
