@@ -11,7 +11,7 @@
       window = {
         completion = {
           border = "rounded";
-          scrollbar = false;
+          scrollbar = true;
           winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None";
           zindex = 1001;
         };
