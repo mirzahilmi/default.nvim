@@ -48,7 +48,19 @@
     lspconfig.phpactor.setup {}
     lspconfig.nixd.setup {}
     lspconfig.arduino_language_server.setup {}
-    lspconfig.yamlls.setup {}
+    lspconfig.yamlls.setup {
+      settings = {
+        yaml = {
+          validate = true,
+          hover = true,
+          completion = true,
+          format = {
+            enable = true,
+            bracketSpacing = true,
+          },
+        }
+      }
+    }
     lspconfig.basedpyright.setup {}
     lspconfig.denols.setup {
       root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
