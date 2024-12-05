@@ -49,6 +49,13 @@
           silent = true;
         };
       };
+      "<leader>\"" = {
+        action = "registers";
+        options = {
+          desc = "Search [\"]Registers";
+          silent = true;
+        };
+      };
     };
   };
 }
