@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./plugins/autopairs.nix
-    ./plugins/bg.nix
+    ./plugins/cmp.nix
     ./plugins/codesnap.nix
     ./plugins/conform.nix
     ./plugins/cord.nix
@@ -16,12 +16,10 @@
     ./plugins/lsp.nix
     ./plugins/lualine.nix
     ./plugins/mini.nix
-    ./plugins/nvim-cmp.nix
     ./plugins/oil.nix
     ./plugins/persistence.nix
     ./plugins/roslyn.nix
     ./plugins/treesitter.nix
-    ./plugins/vim-dbml.nix
     ./plugins/vim-startuptime.nix
     ./plugins/web-devicons.nix
     ./plugins/which-key.nix
