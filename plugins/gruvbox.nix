@@ -6,16 +6,10 @@
   };
   highlightOverride = {
     DarkFloat = {bg = "#232323";};
-    TelescopeSelection = {link = "CursorLine";};
-    TelescopeMatching = {link = "OrangeBold";};
     NormalFloat = {link = "@none";};
     FloatBorder = {link = "@none";};
     Directory = {link = "Yellow";};
-    MiniStatuslineModeNormal = {link = "OctoBubbleBlue";};
-    MiniStatuslineModeInsert = {link = "OctoBubblePurple";};
-    MiniStatuslineModeVisual = {link = "OctoBubbleRed";};
-    MiniStatuslineModeReplace = {link = "OctoBubbleYellow";};
-    MiniStatuslineModeCommand = {link = "OctoBubbleGreen";};
-    MiniStatuslineModeOther = {link = "OctoBubbleGrey";};
+    DiffAdd = {bg = "#3B4439";};
+    DiffText = {bg = "#374141";};
   };
 }
