@@ -20,6 +20,7 @@
     ./plugins/persistence.nix
     ./plugins/roslyn.nix
     ./plugins/treesitter.nix
+    ./plugins/trouble.nix
     ./plugins/vim-startuptime.nix
     ./plugins/web-devicons.nix
     ./plugins/which-key.nix
