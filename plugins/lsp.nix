@@ -47,6 +47,7 @@
     }
     lspconfig.phpactor.setup {}
     lspconfig.nixd.setup {}
+    lspconfig.lua_ls.setup {}
     lspconfig.arduino_language_server.setup {}
     lspconfig.yamlls.setup {
       settings = {
