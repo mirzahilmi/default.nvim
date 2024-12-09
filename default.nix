@@ -1,11 +1,11 @@
-{pkgs, ...}: {
+{
   imports = [
     ./plugins/autopairs.nix
     ./plugins/cmp.nix
     ./plugins/codesnap.nix
+    ./plugins/comment.nix
     ./plugins/conform.nix
     ./plugins/cord.nix
-    ./plugins/dadbod.nix
     ./plugins/dbee.nix
     ./plugins/fzf.nix
     ./plugins/git-conflict.nix
@@ -18,8 +18,9 @@
     ./plugins/mini.nix
     ./plugins/noice.nix
     ./plugins/oil.nix
-    ./plugins/persistence.nix
     ./plugins/roslyn.nix
+    ./plugins/sleuth.nix
+    ./plugins/todo-comment.nix
     ./plugins/treesitter.nix
     ./plugins/trouble.nix
     ./plugins/vim-startuptime.nix
@@ -36,7 +37,6 @@
     relativenumber = true;
     # Enable mouse mode, can be useful for resizing splits for example!
     mouse = "a";
-    # Don't show the mode, since it's already in the statusline
     showmode = false;
     # Sync clipboard between OS and Neovim
     clipboard = "unnamedplus";
@@ -90,9 +90,6 @@
       key = "<Esc>";
       action = "<cmd>nohlsearch<CR>";
     }
-    # Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
-    # for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
-    # is not what someone will guess without a bit more experience.
     {
       mode = "t";
       key = "<Esc><Esc>";
@@ -121,10 +118,6 @@
       key = "<down>";
       action = "<cmd>echo 'Use j to move!!'<CR>";
     }
-    # Keybinds to make split navigation easier.
-    #  Use CTRL+<hjkl> to switch between windows
-    #
-    #  See `:help wincmd` for a list of all window commands
     {
       mode = "n";
       key = "<C-h>";
@@ -157,62 +150,21 @@
         desc = "Move focus to the upper window";
       };
     }
-    # {
-    #   mode = "n";
-    #   key = "<C-/>";
-    #   action = "<C-w><C-k>";
-    #   options = {
-    #     desc = "Move focus to the upper window";
-    #   };
-    # }
   ];
 
   autoGroups = {
-    kickstart-highlight-yank = {
-      clear = true;
-    };
+    hl-yank = {clear = true;};
   };
-
   autoCmd = [
-    #  Highlight when yanking (copying) text
-    #  Try it with `yap` in normal mode
-    #  See `:help vim.highlight.on_yank()`
     {
       event = ["TextYankPost"];
       desc = "Highlight when yanking (copying) text";
-      group = "kickstart-highlight-yank";
+      group = "hl-yank";
       callback.__raw = ''
         function()
           vim.highlight.on_yank()
         end
       '';
     }
-  ];
-
-  plugins = {
-    # Detect tabstop and shiftwidth automatically
-    # https://nix-community.github.io/nixvim/plugins/sleuth/index.html
-    sleuth = {
-      enable = true;
-    };
-
-    # "gc" to comment visual regions/lines
-    # https://nix-community.github.io/nixvim/plugins/comment/index.html
-    comment = {
-      enable = true;
-    };
-
-    # Highlight todo, notes, etc in comments
-    # https://nix-community.github.io/nixvim/plugins/todo-comments/index.html
-    todo-comments = {
-      enable = true;
-      settings.signs = true;
-    };
-  };
-
-  # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
-  extraPlugins = with pkgs.vimPlugins; [
-    vim-abolish
-    vim-be-good
   ];
 }
