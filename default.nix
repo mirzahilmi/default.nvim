@@ -16,6 +16,7 @@
     ./plugins/lsp.nix
     ./plugins/lualine.nix
     ./plugins/mini.nix
+    ./plugins/noice.nix
     ./plugins/oil.nix
     ./plugins/persistence.nix
     ./plugins/roslyn.nix
@@ -215,10 +216,4 @@
     vim-abolish
     vim-be-good
   ];
-
-  # The line beneath this is called `modeline`. See `:help modeline`
-  # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraconfigluapost
-  extraConfigLuaPost = ''
-    -- vim: ts=2 sts=2 sw=2 et
-  '';
 }
