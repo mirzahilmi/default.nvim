@@ -22,6 +22,7 @@
     ./plugins/sleuth.nix
     ./plugins/todo-comment.nix
     ./plugins/treesitter.nix
+    ./plugins/treesj.nix
     ./plugins/trouble.nix
     ./plugins/vim-startuptime.nix
     ./plugins/web-devicons.nix
