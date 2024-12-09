@@ -56,6 +56,13 @@
           silent = true;
         };
       };
+      "<leader><leader>" = {
+        action = "buffers";
+        options = {
+          desc = "List Buffers";
+          silent = true;
+        };
+      };
     };
   };
 }
