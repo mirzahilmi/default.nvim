@@ -9,7 +9,5 @@
     NormalFloat = {link = "@none";};
     FloatBorder = {link = "@none";};
     Directory = {link = "Yellow";};
-    DiffAdd = {bg = "#3B4439";};
-    DiffText = {bg = "#374141";};
   };
 }

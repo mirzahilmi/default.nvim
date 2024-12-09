@@ -7,6 +7,9 @@
 
   extraConfigLua = ''
     local lspconfig = require("lspconfig")
+    lspconfig.phpactor.setup {}
+    lspconfig.arduino_language_server.setup {}
+    lspconfig.basedpyright.setup {}
     lspconfig.gopls.setup {
       settings = {
         gopls = {
@@ -45,24 +48,6 @@
         },
       },
     }
-    lspconfig.phpactor.setup {}
-    lspconfig.nixd.setup {}
-    lspconfig.lua_ls.setup {}
-    lspconfig.arduino_language_server.setup {}
-    lspconfig.yamlls.setup {
-      settings = {
-        yaml = {
-          validate = true,
-          hover = true,
-          completion = true,
-          format = {
-            enable = true,
-            bracketSpacing = true,
-          },
-        }
-      }
-    }
-    lspconfig.basedpyright.setup {}
     lspconfig.denols.setup {
       root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
     }
@@ -93,7 +78,20 @@
   plugins.lsp = {
     enable = true;
     servers = {
-      # bashls.enable = true;
+      nixd.enable = true;
+      lua_ls.enable = true;
+      yamlls = {
+        enable = true;
+        settings.yaml = {
+          validate = true;
+          hover = true;
+          completion = true;
+          format = {
+            enable = true;
+            bracketSpacing = true;
+          };
+        };
+      };
     };
     postConfig = ''
       local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
