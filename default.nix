@@ -26,6 +26,7 @@
     ./plugins/trouble.nix
     ./plugins/vim-startuptime.nix
     ./plugins/web-devicons.nix
+    ./plugins/zen-mode.nix
   ];
 
   globals = {
