@@ -21,7 +21,6 @@
     ./plugins/roslyn.nix
     ./plugins/sleuth.nix
     ./plugins/todo-comment.nix
-    ./plugins/transparent.nix
     ./plugins/treesitter.nix
     ./plugins/treesj.nix
     ./plugins/trouble.nix
@@ -95,7 +94,7 @@
     }
     {
       mode = "t";
-      key = "<Esc><Esc>";
+      key = "<Esc>";
       action = "<C-\\><C-n>";
       options = {
         desc = "Exit terminal mode";

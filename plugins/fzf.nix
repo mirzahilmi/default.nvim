@@ -2,6 +2,16 @@
   plugins.fzf-lua = {
     enable = true;
     settings = {
+      previewers = {
+        builtin.extensions = {
+          "png" = ["chafa"];
+          "jpg" = ["chafa"];
+          "jpeg" = ["chafa"];
+          "gif" = ["chafa"];
+          "webp" = ["chafa"];
+          "svg" = ["chafa"];
+        };
+      };
       winopts = {
         backdrop = 100;
         height = 0.85;
@@ -9,7 +19,6 @@
         row = 0.35;
         col = 0.55;
         treesitter = true;
-        preview.default = "bat";
       };
       buffers = {
         formatter = "path.filename_first";
@@ -20,16 +29,6 @@
           width = 0.4;
           height = 0.6;
         };
-      };
-      lsp.code_actions = {
-        winopts.preview.default = "delta";
-      };
-      previewers.builtin.extensions = {
-        "png" = ["chafa" "{file}"];
-        "jpg" = ["chafa" "{file}"];
-        "jpeg" = ["chafa" "{file}"];
-        "gif" = ["chafa" "{file}"];
-        "webp" = ["chafa" "{file}"];
       };
     };
     keymaps = {
