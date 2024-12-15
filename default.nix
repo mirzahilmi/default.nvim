@@ -21,6 +21,7 @@
     ./plugins/roslyn.nix
     ./plugins/sleuth.nix
     ./plugins/todo-comment.nix
+    ./plugins/transparent.nix
     ./plugins/treesitter.nix
     ./plugins/treesj.nix
     ./plugins/trouble.nix
