@@ -12,6 +12,11 @@
       messages.enabled = false;
       notify.enabled = false;
       popupmenu.enabled = false;
+      # Fix fidget.nvim overlapping statusbar
+      views.mini.position = {
+        row = -2;
+        col = "100%";
+      };
     };
   };
 }
