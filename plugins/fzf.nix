@@ -9,6 +9,7 @@
         row = 0.35;
         col = 0.55;
         treesitter = true;
+        preview.default = "bat";
       };
       buffers = {
         formatter = "path.filename_first";
@@ -21,13 +22,7 @@
         };
       };
       lsp.code_actions = {
-        winopts = {
-          relative = "cursor";
-          row = 1;
-          col = 0;
-          height = 0.4;
-          preview.vertical = "down:70%";
-        };
+        winopts.preview.default = "delta";
       };
       previewers.builtin.extensions = {
         "png" = ["chafa" "{file}"];

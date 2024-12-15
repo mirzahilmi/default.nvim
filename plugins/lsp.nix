@@ -127,12 +127,6 @@
           action = "rename";
           desc = "[R]e[N]ame";
         };
-        # Execute a code action, usually your cursor needs to be on top of an error
-        # or a suggestion from your LSP for this to activate.
-        "<leader>ca" = {
-          action = "code_action";
-          desc = "[C]ode [A]ction";
-        };
         # Opens a popup that displays documentation about the word under your cursor
         #  See `:help K` for why this keymap.
         "K" = {
@@ -170,6 +164,14 @@
           action.__raw = "require('fzf-lua').lsp_document_symbols";
           options = {
             desc = "[D]ocument [S]ymbols";
+          };
+        }
+        {
+          mode = "n";
+          key = "<leader>ca";
+          action.__raw = "require('fzf-lua').lsp_code_actions";
+          options = {
+            desc = "[C]ode [A]ctions";
           };
         }
       ];
