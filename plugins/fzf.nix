@@ -4,6 +4,30 @@
     settings = {
       winopts = {
         backdrop = 100;
+        height = 0.85;
+        width = 0.80;
+        row = 0.35;
+        col = 0.55;
+        treesitter = true;
+      };
+      buffers = {
+        formatter = "path.filename_first";
+        preview_opts = "hidden";
+        no_header = true;
+        no_action_zz = true;
+        winopts = {
+          width = 0.4;
+          height = 0.6;
+        };
+      };
+      lsp.code_actions = {
+        winopts = {
+          relative = "cursor";
+          row = 1;
+          col = 0;
+          height = 0.4;
+          preview.vertical = "down:70%";
+        };
       };
       previewers.builtin.extensions = {
         "png" = ["chafa" "{file}"];
