@@ -9,5 +9,9 @@
     NormalFloat = {link = "@none";};
     FloatBorder = {link = "@none";};
     Directory = {link = "Yellow";};
+    BlinkCmpMenu = {link = "@Normal";};
+    BlinkCmpMenuBorder = {link = "FloatBorder";};
+    BlinkCmpDoc = {link = "DarkFloat";};
+    BlinkCmpDocBorder = {link = "DarkFloat";};
   };
 }

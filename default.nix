@@ -1,7 +1,7 @@
 {
   imports = [
     ./plugins/autopairs.nix
-    ./plugins/cmp.nix
+    ./plugins/blink-cmp.nix
     ./plugins/codesnap.nix
     ./plugins/comment.nix
     ./plugins/conform.nix
