@@ -11,6 +11,7 @@
       cmdline.enabled = false;
       messages.enabled = false;
       notify.enabled = false;
+      popupmenu.enabled = false;
     };
   };
 }
