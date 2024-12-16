@@ -1,73 +1,4 @@
 {
-  plugins = {
-    fidget.enable = true;
-    lspkind.enable = true;
-  };
-
-  extraConfigLua = ''
-    local lspconfig = require("lspconfig")
-    lspconfig.phpactor.setup {}
-    lspconfig.arduino_language_server.setup {}
-    lspconfig.basedpyright.setup {}
-    lspconfig.gopls.setup {
-      settings = {
-        gopls = {
-          gofumpt = true,
-          codelenses = {
-            gc_details = false,
-            generate = true,
-            regenerate_cgo = true,
-            run_govulncheck = true,
-            test = true,
-            tidy = true,
-            upgrade_dependency = true,
-            vendor = true,
-          },
-          hints = {
-            assignVariableTypes = true,
-            compositeLiteralFields = true,
-            compositeLiteralTypes = true,
-            constantValues = true,
-            functionTypeParameters = true,
-            parameterNames = true,
-            rangeVariableTypes = true,
-          },
-          analyses = {
-            fieldalignment = true,
-            nilness = true,
-            unusedparams = true,
-            unusedwrite = true,
-            useany = true,
-          },
-          usePlaceholders = true,
-          completeUnimported = true,
-          staticcheck = true,
-          directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
-          semanticTokens = true,
-        },
-      },
-    }
-    lspconfig.denols.setup {
-      root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-    }
-    lspconfig.biome.setup {
-      filetypes = { "json", "jsonc" },
-      single_file_support = true
-    }
-    lspconfig.terraformls.setup {
-      filetypes = { "terraform", "terraform-vars", "tf", "tfvars" }
-    }
-    lspconfig.rust_analyzer.setup {
-      settings = {
-        ["rust-analyzer"] = {
-          cargo = {
-            allFeatures = true,
-          }
-        }
-      }
-    }
-  '';
-
   autoGroups = {
     "kickstart-lsp-attach" = {
       clear = true;
@@ -79,6 +10,46 @@
     servers = {
       nixd.enable = true;
       lua_ls.enable = true;
+      basedpyright = {
+        enable = true;
+        package = null;
+      };
+      biome = {
+        enable = true;
+        filetypes = ["json" "jsonc"];
+      };
+      terraformls = {
+        enable = true;
+        package = null;
+      };
+      rust_analyzer = {
+        enable = true;
+        package = null;
+        installCargo = false;
+        installRustc = false;
+        settings = {
+          "rust-analyzer" = {
+            cargo.allFeatures = true;
+          };
+        };
+      };
+      denols = {
+        enable = true;
+        package = null;
+        rootDir = ''
+          function()
+            local lspconfig = require("lspconfig")
+            return lspconfig.util.root_pattern("deno.json", "deno.jsonc")
+          end
+        '';
+      };
+      phpactor = {
+        enable = true;
+        package = null;
+        settings = {
+          "language_server_completion.trim_leading_dollar" = true;
+        };
+      };
       yamlls = {
         enable = true;
         settings.yaml = {
@@ -89,6 +60,44 @@
             enable = true;
             bracketSpacing = true;
           };
+        };
+      };
+      gopls = {
+        enable = true;
+        package = null;
+        settings.gopls = {
+          gofumpt = true;
+          codelenses = {
+            gc_details = false;
+            generate = true;
+            regenerate_cgo = true;
+            run_govulncheck = true;
+            test = true;
+            tidy = true;
+            upgrade_dependency = true;
+            vendor = true;
+          };
+          hints = {
+            assignVariableTypes = true;
+            compositeLiteralFields = true;
+            compositeLiteralTypes = true;
+            constantValues = true;
+            functionTypeParameters = true;
+            parameterNames = true;
+            rangeVariableTypes = true;
+          };
+          analyses = {
+            fieldalignment = true;
+            nilness = true;
+            unusedparams = true;
+            unusedwrite = true;
+            useany = true;
+          };
+          usePlaceholders = true;
+          completeUnimported = true;
+          staticcheck = true;
+          directoryFilters = ["-.git" "-.vscode" "-.idea" "-.vscode-test" "-node_modules"];
+          semanticTokens = true;
         };
       };
     };
