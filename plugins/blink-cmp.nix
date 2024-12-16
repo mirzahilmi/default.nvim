@@ -2,10 +2,20 @@
   plugins.blink-cmp = {
     enable = true;
     settings = {
-      sources.default = ["lsp" "path"];
-      completion.menu.border = "rounded";
+      sources = {
+        default = ["lsp" "path"];
+        providers = {
+          lsp.fallbacks = [];
+          path.fallbacks = [];
+        };
+      };
+      completion = {
+        menu = {
+          border = "rounded";
+          draw.treesitter = ["lsp"];
+        };
+      };
       appearance = {
-        use_nvim_cmp_as_default = true;
         nerd_font_variant = "normal";
       };
     };
