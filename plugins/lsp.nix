@@ -14,10 +14,6 @@
         enable = true;
         package = null;
       };
-      biome = {
-        enable = true;
-        filetypes = ["json" "jsonc"];
-      };
       terraformls = {
         enable = true;
         package = null;
@@ -65,6 +61,7 @@
       gopls = {
         enable = true;
         package = null;
+        goPackage = null;
         settings.gopls = {
           gofumpt = true;
           codelenses = {
@@ -101,14 +98,6 @@
         };
       };
     };
-    postConfig = ''
-      local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-      function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-        opts = opts or {}
-        opts.border = opts.border or "rounded"
-        return orig_util_open_floating_preview(contents, syntax, opts, ...)
-      end
-    '';
     keymaps = {
       diagnostic = {
         "[d" = {
