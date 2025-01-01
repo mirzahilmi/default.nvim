@@ -6,6 +6,7 @@
     ./plugins/comment.nix
     ./plugins/conform.nix
     ./plugins/cord.nix
+    ./plugins/dap.nix
     ./plugins/dbee.nix
     ./plugins/fzf.nix
     ./plugins/git-conflict.nix
