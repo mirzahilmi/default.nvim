@@ -153,6 +153,14 @@
         desc = "Move focus to the upper window";
       };
     }
+    {
+      mode = "n";
+      key = "<leader>t";
+      action = "<cmd>terminal<CR>";
+      options = {
+        desc = "Open [T]erminal";
+      };
+    }
   ];
 
   autoGroups = {
