@@ -8,10 +8,10 @@
   };
   keymaps = [
     {
-      key = "<leader>tt";
+      key = "<leader>tr";
       action = "<cmd>Trouble diagnostics toggle<cr>";
       options = {
-        desc = "[T]oggle [T]rouble";
+        desc = "[TR]ouble";
         silent = true;
       };
     }
