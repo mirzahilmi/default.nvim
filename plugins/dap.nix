@@ -37,6 +37,8 @@
     dap.listeners.before.event_exited.dapui_config = function()
       dapui.close()
     end
+
+    -- Maybe reference https://github.com/mfussenegger/nvim-dap/issues/1035
   '';
   keymaps = [
     {
