@@ -21,10 +21,11 @@
         };
       };
       formatters_by_ft = {
+        cs = ["csharpier"];
         lua = ["stylua"];
         nix = ["alejandra"];
         php = ["php-cs-fixer"];
-        cs = ["csharpier"];
+        python = ["black"];
         sql = ["sql_formatter"];
       };
       format_on_save = ''
