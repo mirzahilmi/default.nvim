@@ -7,8 +7,8 @@ vimUtils.buildVimPlugin {
   src = fetchFromGitHub {
     owner = "seblj";
     repo = "roslyn.nvim";
-    rev = "11168911d35ea276b1fbd8fa33f7564325b6c624";
-    hash = "sha256-iHCDmht0qCkfuFHTHKSuq7s6hnDRhHJeOfbcOlee6Rs=";
+    rev = "85aca5d48ddf8ada4e010ee9fa4d43c77ebf68c9";
+    hash = "sha256-UW0iWGNNWjLIYszKUBYOqoFxbmELX9VVgTj63UJdo4A=";
   };
   meta.homepage = "https://github.com/seblj/roslyn.nvim";
 }
